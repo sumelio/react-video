@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './media.css'
 
 // 1. funtiona
 // 2. puro
@@ -8,20 +9,23 @@ class Media extends Component {
     render() {
         const style = {
             container: {
-                fontSize: 24,
-                backgroundColor: 'yellow'
+                color: '#44546b',
+                cursor: 'pointer',
+                width: 260,
+                border: '1px solid red'
             }
         }
         return (
-            <div style={style.container}>
-                <div>
-                    <img src=""
+            <div className="Media">
+                <div className="Media-cover" >
+                    <img src="./images/covers/bitcoin.jpg"
                     alt=""
                     width={260}
                     height={210}
+                     className="Media-image"
                     />
-                    <h3>Mi react</h3>
-                    <p>Mi parafo</p>
+                    <h3 className="Media-title" >Mi reactdddddddddddddddddddd dddd dddd ddd</h3>
+                    <p className="Media-author" >Mi parafo dddd dddddddd ddddd dddddddddddd ddd</p>
                 </div>
             </div>
         )
