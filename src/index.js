@@ -4,4 +4,8 @@ import Media from './playlist/components/media'
 
 console.log('HEEEllo world')
 const containter = document.getElementById('app')
-render( <Media id="medias"/>, containter)
+render( <Media title="12"
+               author="Yo mismo"
+               type="video"
+                image="./images/covers/bitcoin.jpg"
+                id="medias"/>, containter)
