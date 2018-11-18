@@ -1,11 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Media from './playlist/components/media'
+import Playlist from './playlist/components/playlist'
+import data from './data/api.json'
 
 console.log('HEEEllo world')
 const containter = document.getElementById('app')
-render( <Media title="12"
-               author="Yo mismo"
-               type="video"
-                image="./images/covers/bitcoin.jpg"
-                id="medias"/>, containter)
+render( <Playlist data={data}/>, containter)

@@ -7,13 +7,23 @@ import PropTypes from 'prop-types'
 // 3. estado
 
 class Media extends Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.handleClick = this.handleClick.bind(this)
-    // }
+//     constructor(props) {
+//          super(props)
+//     //     this.handleClick = this.handleClick.bind(this)
+    
+//     this.state = {
+//         author: props.author
+//     }
+//    }
+
+ state = {
+             author: 'fredisss'
+         }
 
     handleClick = (event) => {
-        console.log(this.props.title)
+        this.setState({
+            author: "Freduuss"
+        })
     }
     render() {
         const style = {
@@ -27,10 +37,10 @@ class Media extends Component {
         return (
             <div className="Media" onClick={this.handleClick}>
                 <div className="Media-cover" >
-                    <img src={this.props.image}
+                    <img src={this.props.cover}
                     alt=""
                     width={260}
-                    height={210}
+                    height={200}
                      className="Media-image"
                     />
                     <h3 className="Media-title" >{this.props.title}</h3>
@@ -40,12 +50,5 @@ class Media extends Component {
         )
     }
 }
-
-Media.propTypes = {
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  author: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['video','audio']).isRequired,
-}
+ 
 export default Media;
