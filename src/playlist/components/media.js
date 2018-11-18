@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import './media.css'
 import PropTypes from 'prop-types'
 
@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 // 2. puro
 // 3. estado
 
-class Media extends Component {
+class Media extends PureComponent {
 //     constructor(props) {
 //          super(props)
 //     //     this.handleClick = this.handleClick.bind(this)
