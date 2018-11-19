@@ -17,7 +17,7 @@ module.exports = (env) => {
   return {
 
     entry: {
-      "react-video": path.resolve(__dirname, 'src/index.js'),
+      "home": path.resolve(__dirname, 'src/entries/home.js'),
     },
     output: {
       path: path.resolve(__dirname, 'dist'),

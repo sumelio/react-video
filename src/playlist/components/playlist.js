@@ -1,48 +1,20 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom'
+import React from 'react';
 import Media from './media'
 import  './playlist.css'
+import Control from '../../icons/components/Control'
 
 function handleClcik(e) {
  console.log(e)
 }
 // No tiene ciclo de vida
-function PlayuList(props) {
-    const playList = props.data.categories[0].playlist
-    return (        
+function PlayList(props) { 
+    const {Play, Volume, Pause, FullScreen} = Control
+    return ( 
      <div className="Playlist" onClick={handleClcik}>
-             {
-                 
-                 playList.map( (item) => {
-                    console.log(item);
-                    return <Media key={item.id} {...item} /> 
-                 }
-                )
-             }
-           
-         </div>
+             { props.playList.map( (item) =>  <Media key={item.id} {...item} /> ) }
+     </div>
     )
 }
-// class PlayuList extends Component {
-    
-//     render() {
-        
-//         const playList = this.props.data.categories[0].playlist
-        
-//         return (
-//          <div className="Playlist">
-//              {
-//                  playList.map( (item) => {
-//                     console.log(item);
-//                     return <Media key={item.id} {...item} /> 
-//                  }
-//                 )
-//              }
-           
-//          </div>
-//          )
-//     }
-// }
 
-export default PlayuList;
+export default PlayList;
 
