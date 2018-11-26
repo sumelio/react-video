@@ -1,20 +1,23 @@
 import React from 'react';
 import Media from './media'
 import  './playlist.css'
-import Control from '../../icons/components/Control'
 
 function handleClcik(e) {
- console.log(e)
+ console.log('props ' + props.handleOpenModal)
 }
 // No tiene ciclo de vida
 function PlayList(props) { 
-    const {Play, Volume, Pause, FullScreen} = Control
+    
     return ( 
-     <div className="Playlist" onClick={handleClcik}>
-             { props.playList.map( (item) =>  <Media key={item.id} {...item} /> ) }
+     <div className="Playlist" onClick={props.handleOpenModal} >
+             { props.playList.map( (item) =>  
+             <Media key={item.id}  
+                    {...item}  
+                    handleClick={props.handleOpenModal} 
+                /> ) 
+           }
      </div>
     )
 }
-
 export default PlayList;
 

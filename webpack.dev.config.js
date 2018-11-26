@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -41,5 +42,14 @@ module.exports = {
         }
       },
     ]
-  }
+  },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      // test: /\.xxx$/, // may apply this only for some modules
+      options: {
+        devtools: 'eval-source-map'
+      }
+    })
+  ]
+
 }
