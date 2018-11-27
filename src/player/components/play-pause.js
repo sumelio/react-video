@@ -3,7 +3,7 @@ import './play-pause.css'
 
 import Control from '../../icons/components/Control'
 
-const {Play, Volume, Pause, FullScreen} = Control
+const {Play, Pause} = Control
 
 
 const PlayPause = (props) => (

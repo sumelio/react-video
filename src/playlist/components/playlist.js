@@ -9,11 +9,11 @@ function handleClcik(e) {
 function PlayList(props) { 
     
     return ( 
-     <div className="Playlist" onClick={props.handleOpenModal} >
+     <div className="Playlist"  >
              { props.playList.map( (item) =>  
              <Media key={item.id}  
                     {...item}  
-                    handleClick={props.handleOpenModal} 
+                    openModal={props.handleOpenModal}
                 /> ) 
            }
      </div>
